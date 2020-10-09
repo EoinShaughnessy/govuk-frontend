@@ -196,7 +196,7 @@ describe('Notification-banner', () => {
       const $ = render('notification-banner', examples['with text as html'])
       const $contentHtml = $('.govuk-notification-banner__content')
 
-      expect($contentHtml.html().trim()).toEqual('<h3 class="govuk-heading-m">This publication was withdrawn on 7 March 2014</h3><p>Archived and replaced by the <a href="#">new planning guidance</a> launched 6 March 2014 on an external website</p>')
+      expect($contentHtml.html().trim()).toEqual('<h3 class="govuk-heading-m">This publication was withdrawn on 7 March 2014</h3><p>Archived and replaced by the <a href="#" class="govuk-notification-banner__link">new planning guidance</a> launched 6 March 2014 on an external website</p>')
     })
   })
 
@@ -206,6 +206,13 @@ describe('Notification-banner', () => {
 
       const $component = $('.govuk-notification-banner')
       expect($component.hasClass('govuk-notification-banner--success')).toBeTruthy()
+    })
+
+    it('renders with appropriate header class', () => {
+      const $ = render('notification-banner', examples['with type as success'])
+
+      const $header = $('.govuk-notification-banner__header')
+      expect($header.hasClass('govuk-notification-banner__header--success')).toBeTruthy()
     })
 
     it('has role=alert attribute', () => {
@@ -257,6 +264,13 @@ describe('Notification-banner', () => {
 
       const $component = $('.govuk-notification-banner')
       expect($component.hasClass('govuk-notification-banner--error')).toBeTruthy()
+    })
+
+    it('renders with appropriate header class', () => {
+      const $ = render('notification-banner', examples['with type as error'])
+
+      const $header = $('.govuk-notification-banner__header')
+      expect($header.hasClass('govuk-notification-banner__header--error')).toBeTruthy()
     })
 
     it('has role=alert attribute', () => {
