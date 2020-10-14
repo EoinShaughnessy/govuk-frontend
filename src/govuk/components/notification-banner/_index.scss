@@ -10,14 +10,6 @@
     }
   }
 
-  .govuk-notification-banner--success {
-    border-color: $govuk-success-colour;
-  }
-
-  .govuk-notification-banner--error {
-    border-color: $govuk-error-colour;
-  }
-
   .govuk-notification-banner__header {
     padding: 0 govuk-spacing(3) govuk-spacing(1);
 
@@ -28,14 +20,6 @@
     @include govuk-media-query($from: tablet) {
       padding: (govuk-spacing(2) - $govuk-border-width) govuk-spacing(4) govuk-spacing(2);
     }
-  }
-
-  .govuk-notification-banner--success .govuk-notification-banner__header {
-    background-color: $govuk-success-colour;
-  }
-
-  .govuk-notification-banner--error .govuk-notification-banner__header {
-    background-color: $govuk-error-colour;
   }
 
   .govuk-notification-banner__title {
@@ -64,11 +48,27 @@
     @include govuk-link-style-default;
   }
 
-  .govuk-notification-banner__link--success {
-    @include govuk-link-style-success;
+  .govuk-notification-banner--success {
+    border-color: $govuk-success-colour;
+
+    .govuk-notification-banner__header {
+      background-color: $govuk-success-colour;
+    }
+
+    .govuk-notification-banner__link {
+      @include govuk-link-style-success;
+    }
   }
 
-  .govuk-notification-banner__link--error {
-    @include govuk-link-style-error;
+  .govuk-notification-banner--error {
+    border-color: $govuk-error-colour;
+
+    .govuk-notification-banner__header {
+      background-color: $govuk-error-colour;
+    }
+
+    .govuk-notification-banner__link {
+      @include govuk-link-style-error;
+    }
   }
 }

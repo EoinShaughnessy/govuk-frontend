@@ -208,13 +208,6 @@ describe('Notification-banner', () => {
       expect($component.hasClass('govuk-notification-banner--success')).toBeTruthy()
     })
 
-    it('renders with appropriate header class', () => {
-      const $ = render('notification-banner', examples['with type as success'])
-
-      const $header = $('.govuk-notification-banner__header')
-      expect($header.hasClass('govuk-notification-banner__header--success')).toBeTruthy()
-    })
-
     it('has role=alert attribute', () => {
       const $ = render('notification-banner', examples['with type as success'])
 
@@ -264,13 +257,6 @@ describe('Notification-banner', () => {
 
       const $component = $('.govuk-notification-banner')
       expect($component.hasClass('govuk-notification-banner--error')).toBeTruthy()
-    })
-
-    it('renders with appropriate header class', () => {
-      const $ = render('notification-banner', examples['with type as error'])
-
-      const $header = $('.govuk-notification-banner__header')
-      expect($header.hasClass('govuk-notification-banner__header--error')).toBeTruthy()
     })
 
     it('has role=alert attribute', () => {
