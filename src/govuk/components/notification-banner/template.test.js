@@ -70,9 +70,9 @@ describe('Notification-banner', () => {
 
     it('renders content', () => {
       const $ = render('notification-banner', examples.default)
-      const $content = $('.govuk-notification-banner__content')
+      const $text = $('.govuk-notification-banner__heading')
 
-      expect($content.html().trim()).toEqual('You have 9 days to send a response.')
+      expect($text.html().trim()).toEqual('You have 9 days to send a response.')
     })
   })
 
@@ -86,9 +86,9 @@ describe('Notification-banner', () => {
 
     it('renders custom content', () => {
       const $ = render('notification-banner', examples['custom text'])
-      const $content = $('.govuk-notification-banner__content')
+      const $text = $('.govuk-notification-banner__heading')
 
-      expect($content.html().trim()).toEqual('This publication was withdrawn on 7 March 2014.')
+      expect($text.html().trim()).toEqual('This publication was withdrawn on 7 March 2014.')
     })
 
     it('renders custom heading level', () => {
@@ -187,16 +187,16 @@ describe('Notification-banner', () => {
 
     it('renders content as escaped html when passed as text', () => {
       const $ = render('notification-banner', examples['html as text'])
-      const $content = $('.govuk-notification-banner__content')
+      const $text = $('.govuk-notification-banner__heading')
 
-      expect($content.html().trim()).toEqual('&lt;span&gt;This publication was withdrawn on 7 March 2014.&lt;/span&gt;')
+      expect($text.html().trim()).toEqual('&lt;span&gt;This publication was withdrawn on 7 March 2014.&lt;/span&gt;')
     })
 
     it('renders content as html', () => {
       const $ = render('notification-banner', examples['with text as html'])
       const $contentHtml = $('.govuk-notification-banner__content')
 
-      expect($contentHtml.html().trim()).toEqual('<h3 class="govuk-heading-m">This publication was withdrawn on 7 March 2014</h3><p>Archived and replaced by the <a href="#" class="govuk-notification-banner__link">new planning guidance</a> launched 6 March 2014 on an external website</p>')
+      expect($contentHtml.html().trim()).toEqual('<h3 class="govuk-heading-m">This publication was withdrawn on 7 March 2014</h3><p class="govuk-notification-banner__heading">Archived and replaced by the <a href="#" class="govuk-notification-banner__link">new planning guidance</a> launched 6 March 2014 on an external website</p>')
     })
   })
 

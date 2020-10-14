@@ -55,7 +55,7 @@ examples:
 - name: with text as html
   data:
     html: |
-      <h3 class="govuk-heading-m">This publication was withdrawn on 7 March 2014</h3><p>Archived and replaced by the <a href="#" class="govuk-notification-banner__link">new planning guidance</a> launched 6 March 2014 on an external website</p>
+      <h3 class="govuk-heading-m">This publication was withdrawn on 7 March 2014</h3><p class="govuk-notification-banner__heading">Archived and replaced by the <a href="#" class="govuk-notification-banner__link">new planning guidance</a> launched 6 March 2014 on an external website</p>
 - name: with type as success
   data:
     type: success
@@ -78,7 +78,7 @@ examples:
   data:
     html: |
       <h3 class="govuk-heading-m">4 files uploaded</h3>
-      <ul class="govuk-list govuk-list--bullet">
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
           <li><a href="#" class="govuk-notification-banner__link">government-strategy.pdf</a></li>
           <li><a href="#" class="govuk-notification-banner__link">government-strategy-v2.pdf</a></li>
           <li><a href="#" class="govuk-notification-banner__link">government-strategy-v3-FINAL.pdf</a></li>
